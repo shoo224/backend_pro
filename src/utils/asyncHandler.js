@@ -7,4 +7,4 @@ const asyncHandler = (requestHandler) => {
 
 export {asyncHandler}
 
-//wrapper up data request handling function.
+//wrapped up data request handling function.
