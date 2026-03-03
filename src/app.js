@@ -13,7 +13,16 @@ app.use(express.urlencoded({extended:true,limit:"20kb"}))
 app.use(express.static("public"))
 app.use(cookieParser())
 // Request → CORS → Body Parser → Cookie Parser → Route → Response (flow of data through the middlewares)
+app.get("/",(req,res)=>{
+    res.send("server is working")
+})
 
+//routes
 
+import userRouter from './routes/user.routes.js'
+
+//routes declaration
+
+app.use("/api/v1/users",userRouter)
 
 export { app } 
